@@ -1,0 +1,41 @@
+
+#Box Specific Configuration 
+Vagrant.configure("2") do |config|
+
+config.vm.box = "ubuntu/bionic64"
+
+# Download the official Ubuntu 18.04 LTS Vagrant Box 
+# The Official Ubuntu Box only supports Virtualbox 
+# Download Virtualbox from here: https://www.virtualbox.org/ 
+# Available for Windows, Linux and MacOS
+
+config.vm.hostname = "OrangePi-Build"
+
+#Set the Hostname to OrangePi_Build
+
+config.vm.synced_folder ".", "/home/vagrant/", disabled:true
+
+# Configure a synced Folder ( disabled by default) 
+
+config.vm.provision "shell", path:"https://raw.githubusercontent.com/Thore-Krug/vagrant-boxes/orangepi-build/install.sh"
+
+# Provision a Shell script to install the desired Software into the Vagrant Box  
+
+######################################################################
+#Virtualbox Specific Configuration
+config.vm.provider "virtualbox" do |vb|
+
+vb.memory = "4096"
+
+#Sets the amount or memory used by the Box, in this case 4GB 
+# If you want to in or decrease the amount of Memory used by the Box enter values in Megabyte. 
+#
+#1024 for 1 GB 
+#2048 for 2 GB 
+#4096 for 4 GB 
+#8192 for 8 GB 
+# etc. 
+end 
+
+
+end
