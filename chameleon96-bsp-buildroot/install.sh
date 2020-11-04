@@ -2,7 +2,7 @@
 
 echo " Setting up the Development enviroment "
 
-curl https://github.com/Thore-Krug/vagrant-boxes/blob/master/chameleon96-bsp-buildroot/icon.txt 
+curl https://raw.githubusercontent.com/Thore-Krug/vagrant-boxes/master/chameleon96-bsp-buildroot/icon.txt 
 
 sudo apt-get update
 
