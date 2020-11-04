@@ -17,7 +17,7 @@ config.vm.synced_folder ".", "/home/vagrant/", disabled:true
 
 # Configure a synced Folder ( disabled by default) 
 
-config.vm.provision "shell", path:"https://raw.githubusercontent.com/Thore-Krug/vagrant-boxes/orangepi-build/install.sh"
+config.vm.provision "shell", path:"https://raw.githubusercontent.com/Thore-Krug/vagrant-boxes/master/orangepi-build/install.sh"
 
 # Provision a Shell script to install the desired Software into the Vagrant Box  
 
